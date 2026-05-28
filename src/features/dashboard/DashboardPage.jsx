@@ -1,14 +1,10 @@
-import AppLayout       from "../../shared/components/AppLayout";
-import DashRightPanel  from "./components/DashRightPanel";
-import AICoachMobileBanner from "./components/AICoachMobileBanner";
-import RoadmapSection  from "./components/RoadmapSection";
-import { COLORS } from "../../shared/constants/theme";
+import AppLayout      from "../../shared/components/AppLayout";
+import RoadmapSection from "./components/RoadmapSection";
 
 export default function DashboardPage() {
   return (
-    <AppLayout rightPanel={<DashRightPanel />}>
+    <AppLayout>
       <main style={styles.main}>
-        <AICoachMobileBanner />
         <RoadmapSection />
       </main>
     </AppLayout>
