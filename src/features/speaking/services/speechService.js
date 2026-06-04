@@ -31,9 +31,10 @@ export function createSpeechRecognizer({ lang = "en-US", onInterim, onFinal, onE
   return recognition;
 }
 
-// context: free speak prompt hoặc topic label
-// ttsOnly: true → chỉ lấy audio, không gọi Claude (dùng cho intro greeting)
-export async function getAIResponse(transcript, context = null, ttsOnly = false) {
+// context : free-speak prompt (string)   — option 2
+// topic   : learning path node object    — option 1  { label, words, grammarTopics }
+// ttsOnly : true → chỉ lấy audio, không gọi Claude (dùng cho intro greeting)
+export async function getAIResponse(transcript, context = null, ttsOnly = false, topic = null) {
   if (ttsOnly) {
     const res = await fetch(`${API_URL}/tts`, {
       method: "POST",
@@ -45,15 +46,22 @@ export async function getAIResponse(transcript, context = null, ttsOnly = false)
     return { replyText: transcript, audioUrl: URL.createObjectURL(audioBlob) };
   }
 
+  const body = { text: transcript };
+  if (topic) {
+    body.topic = { label: topic.label, words: topic.words, grammarTopics: topic.grammarTopics };
+  } else if (context) {
+    body.context = context;
+  }
+
   const res = await fetch(`${API_URL}/speak`, {
     method: "POST",
     headers: { "Content-Type": "application/json" },
-    body: JSON.stringify({ text: transcript, context }),
+    body: JSON.stringify(body),
   });
 
   if (!res.ok) throw new Error("API error");
 
-  const replyText = res.headers.get("X-Reply-Text") ?? "";
+  const replyText = decodeURIComponent(res.headers.get("X-Reply-Text") ?? "");
   const audioBlob = await res.blob();
   const audioUrl  = URL.createObjectURL(audioBlob);
 

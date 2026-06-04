@@ -82,9 +82,12 @@ export default function SpeakingPage() {
         setUserTranscript(text);
         setStatus(STATUS.THINKING);
         try {
-          // Truyền context (freeTopic hoặc topic) sang backend
-          const context = freeTopic?.prompt ?? topic?.label ?? null;
-          const { replyText, audioUrl } = await getAIResponse(text, context);
+          const { replyText, audioUrl } = await getAIResponse(
+            text,
+            freeTopic?.prompt ?? null,  // free-speak prompt
+            false,
+            topic ?? null,              // learning path node (words, grammarTopics)
+          );
           setStatus(STATUS.SPEAKING);
           setReplyVisible(true);
           typeReply(replyText);

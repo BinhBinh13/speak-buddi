@@ -17,58 +17,7 @@ const ROADMAP = [
       { id: 9,   color: "#C54CB9", emoji: "🕐", label: "Free Time",        state: "locked",  xp: 0,   lessons: 4, vocab: 6,  grammar: 1, words: ["movie","music","sport","read","travel","game"], grammarTopics: ["Like + verb-ing"] },
       { id: 10, color: "#ED3044", emoji: "🚶", label: "Going Out",        state: "locked",  xp: 0,   lessons: 5, vocab: 7,  grammar: 1, words: ["restaurant","cinema","park","mall","cafe","meet up","invite","plan"], grammarTopics: ["Making suggestions"] },
     ],
-  },
-  {
-    level: "Elementary", color: COLORS.sky,
-    nodes: [
-      { id: 11, pos: "center", color: "#FF6244", emoji: "⏰", label: "Daily Habits",        state: "locked", xp: 0, lessons: 5, vocab: 6, grammar: 1, words: ["always","usually","often","sometimes","rarely","never"], grammarTopics: ["Frequency expressions"] },
-      { id: 12, pos: "right",  color: "#00C0B4", emoji: "🤔", label: "What Are You Doing?", state: "locked", xp: 0, lessons: 4, vocab: 5, grammar: 1, words: ["now","currently","at the moment","still","right now"], grammarTopics: ["Present continuous"] },
-      { id: 13, pos: "left",   color: "#ED5BAA", emoji: "📖", label: "Yesterday's Story",   state: "locked", xp: 0, lessons: 4, vocab: 6, grammar: 1, words: ["yesterday","last week","ago","before","then","suddenly"], grammarTopics: ["Simple past"] },
-      { id: 14, pos: "center", color: "#FFB617", emoji: "☀️", label: "Summer Plans",        state: "locked", xp: 0, lessons: 5, vocab: 6, grammar: 1, words: ["trip","holiday","beach","camping","visit","travel"], grammarTopics: ["Future with going to"] },
-      { id: 15, pos: "right",  color: "#7BC537", emoji: "🎉", label: "Holidays",            state: "locked", xp: 0, lessons: 6, vocab: 7, grammar: 1, words: ["celebrate","festival","tradition","gift","family","party"], grammarTopics: ["Past simple irregular verbs"] },
-      { id: 16, pos: "left",   color: "#00B1DF", emoji: "🔮", label: "Future Plans",        state: "locked", xp: 0, lessons: 5, vocab: 6, grammar: 2, words: ["plan","hope","want","dream","expect","prepare"], grammarTopics: ["Will vs going to","Future time clauses"] },
-      { id: 17, pos: "center", color: "#2B8CE3", emoji: "👔", label: "Formal or Casual",    state: "locked", xp: 0, lessons: 4, vocab: 5, grammar: 1, words: ["formal","casual","polite","excuse me","I would like","could you"], grammarTopics: ["Formal vs informal register"] },
-      { id: 18, pos: "right",  color: "#9B7AE2", emoji: "📅", label: "A Busy Week",         state: "locked", xp: 0, lessons: 5, vocab: 6, grammar: 1, words: ["schedule","meeting","deadline","busy","available","appointment"], grammarTopics: ["Present perfect"] },
-    ],
-  },
-  {
-    level: "Intermediate", color: COLORS.amber,
-    nodes: [
-      { id: 19, pos: "center", color: "#2B8CE3", emoji: "💼", label: "First Day at Work", state: "locked", xp: 0, lessons: 6, vocab: 8, grammar: 1, words: ["introduce","colleague","department","task","deadline","office"], grammarTopics: ["Reported speech"] },
-      { id: 20, pos: "right",  color: "#9B7AE2", emoji: "📱", label: "Phone Etiquette",   state: "locked", xp: 0, lessons: 4, vocab: 5, grammar: 1, words: ["hold on","call back","leave a message","hang up","dial","missed call"], grammarTopics: ["Indirect questions"] },
-      { id: 21, pos: "left",   color: "#C54CB9", emoji: "🎬", label: "Favorite Movies",   state: "locked", xp: 0, lessons: 5, vocab: 7, grammar: 1, words: ["genre","plot","character","scene","sequel","recommend"], grammarTopics: ["Relative clauses"] },
-      { id: 22, pos: "center", color: "#00B1DF", emoji: "📰", label: "Social Media",      state: "locked", xp: 0, lessons: 5, vocab: 6, grammar: 1, words: ["post","share","like","follow","comment","trend"], grammarTopics: ["Passive voice"] },
-      { id: 23, pos: "right",  color: "#ED5BAA", emoji: "💡", label: "I Wish I Knew",     state: "locked", xp: 0, lessons: 6, vocab: 6, grammar: 2, words: ["wish","regret","if only","should have","could have","would have"], grammarTopics: ["Conditional II","Mixed conditionals"] },
-      { id: 24, pos: "left",   color: "#FF6244", emoji: "🔄", label: "Narrative Tenses",  state: "locked", xp: 0, lessons: 5, vocab: 5, grammar: 2, words: ["while","when","after","before","as soon as","by the time"], grammarTopics: ["Past perfect","Narrative tenses"] },
-    ],
-  },
-  {
-    level: "Upper Intermediate", color: COLORS.coral,
-    nodes: [
-      { id: 25, pos: "center", color: "#00B1DF", emoji: "💼", label: "Job Opportunities", state: "locked", xp: 0, lessons: 6, vocab: 8, grammar: 1, words: ["apply","interview","CV","cover letter","promotion","salary"], grammarTopics: ["Gerunds vs infinitives"] },
-      { id: 26, pos: "right",  color: "#2B8CE3", emoji: "🏠", label: "Household Chores",  state: "locked", xp: 0, lessons: 4, vocab: 7, grammar: 1, words: ["vacuum","mop","laundry","dishes","tidy up","fix","repair"], grammarTopics: ["Causative have/get"] },
-      { id: 27, pos: "left",   color: "#9B7AE2", emoji: "✈️", label: "Travel Plans",      state: "locked", xp: 0, lessons: 5, vocab: 7, grammar: 1, words: ["itinerary","accommodation","departure","arrival","customs","currency"], grammarTopics: ["Future perfect"] },
-      { id: 28, pos: "center", color: "#C54CB9", emoji: "⚽", label: "Making Choices",    state: "locked", xp: 0, lessons: 5, vocab: 6, grammar: 1, words: ["pros","cons","weigh up","consider","decision","alternative"], grammarTopics: ["Concession clauses"] },
-    ],
-  },
-  {
-    level: "Advanced", color: "#8B5CF6",
-    nodes: [
-      { id: 29, pos: "center", color: "#FF6244", emoji: "☕", label: "Catching Up",     state: "locked", xp: 0, lessons: 6, vocab: 6, grammar: 1, words: ["catch up","fill in","update","long time no see","what's new","keep in touch"], grammarTopics: ["Discourse markers"] },
-      { id: 30, pos: "right",  color: "#00C0B4", emoji: "🏕️", label: "Weekend Getaway", state: "locked", xp: 0, lessons: 5, vocab: 6, grammar: 1, words: ["getaway","unwind","scenic","spontaneous","road trip","adventure"], grammarTopics: ["Participle clauses"] },
-      { id: 31, pos: "left",   color: "#ED5BAA", emoji: "💯", label: "That's So True",  state: "locked", xp: 0, lessons: 4, vocab: 5, grammar: 1, words: ["absolutely","definitely","exactly","precisely","I couldn't agree more","fair point"], grammarTopics: ["Emphatic structures"] },
-      { id: 32, pos: "center", color: "#FFB617", emoji: "🎯", label: "Convince Me",     state: "locked", xp: 0, lessons: 6, vocab: 6, grammar: 1, words: ["argue","claim","evidence","persuade","convince","point out"], grammarTopics: ["Advanced conditionals"] },
-    ],
-  },
-  {
-    level: "Fluent", color: "#059669",
-    nodes: [
-      { id: 33, pos: "center", color: "#00B1DF", emoji: "🎤", label: "The Art of Small Talk", state: "locked", xp: 0, lessons: 6, vocab: 6, grammar: 1, words: ["Common fillers (you know, I mean...)"] },
-      { id: 34, pos: "right",  color: "#9B7AE2", emoji: "✈️", label: "Travel Mishaps",         state: "locked", xp: 0, lessons: 5, vocab: 6, grammar: 1, words: ["delay","cancel","refund","complaint","lost luggage","emergency"], grammarTopics: ["Hypothetical past"] },
-      { id: 35, pos: "left",   color: "#ED5BAA", emoji: "🏢", label: "Office Drama",            state: "locked", xp: 0, lessons: 4, vocab: 5, grammar: 1, words: ["gossip","conflict","tension","resolve","mediate","professional"], grammarTopics: ["Inversion for emphasis"] },
-      { id: 36, pos: "center", color: "#7BC537", emoji: "🎉", label: "Remote vs Office",        state: "locked", xp: 0, lessons: 6, vocab: 6, grammar: 1, words: ["remote","hybrid","flexible","commute","collaboration","productivity"], grammarTopics: ["Complex noun phrases"] },
-    ],
-  },
+  }
 ];
 const WAVE = ["left", "center", "right", "center"];
 
